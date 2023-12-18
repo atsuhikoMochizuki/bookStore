@@ -32,4 +32,12 @@ public class BookService {
     public List<Book> getAllBook(){
         return bRepo.findAll();
     }
+
+    public Book getBookById(int id){
+        return bRepo.findById(id).get();
+    }
+
+    public void deleteById(int id){
+        bRepo.deleteById(id);
+    }
 }
